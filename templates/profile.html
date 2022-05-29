@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>Movie Club</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Music">
+    <meta name="keywords" content="">
+    <meta name="author" content="kamleshyadav">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/nice_select/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/player/volume.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/scroll/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/alert.css">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
+</head>
+static/
+
+<body>
+    <!----Loader Start---->
+    <div class="ms_loader">
+        <div class="wrap">
+            <img src="static/images/loader.gif" alt="">
+        </div>
+    </div>
+    <!----Main Wrapper Start---->
+    <div class="ms_main_wrapper">
+        <!---Side Menu Start--->
+        <div class="ms_sidemenu_wrapper">
+            <div class="ms_nav_close">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="ms_sidemenu_inner">
+                <div class="ms_logo_inner">
+                    <div class="ms_logo">
+                        <a href="/dashboard"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                    <div class="ms_logo_open">
+                        <a href="/dashboard"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="ms_nav_wrapper">
+                    <ul>
+                        <li><a href="/dashboard" class="active" title="Discover">
+                                <span class="nav_icon">
+                                    <span class="icon icon_discover"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/profile">
+                                <span class="nav_icon">
+                                    <span class="icon icon_tracks"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Profile
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/watchlist" title="Albums">
+                                <span class="nav_icon">
+                                    <span class="icon icon_albums"></span>
+                                </span>
+                                <span class="nav_text">
+                                    WatchList
+                                </span>
+                            </a>
+                        </li>
+
+                        <li><a href="/genre" title="Genres">
+                                <span class="nav_icon">
+                                    <span class="icon icon_genres"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Genres
+                                </span>
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                    <ul class="nav_downloads">
+                        
+                        
+                        <li><a href="/favcol" title="Favourites">
+                                <span class="nav_icon">
+                                    <span class="icon icon_favourite"></span>
+                                </span>
+                                <span class="nav_text">
+                                    favourites
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/history" title="History">
+                                <span class="nav_icon">
+                                    <span class="icon icon_history"></span>
+                                </span>
+                                <span class="nav_text">
+                                    history
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/logout" title="Purchased">
+                            <span class="nav_icon">
+                                <span class="icon icon_download"></span>
+                            </span>
+                            <span class="nav_text">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <!---Main Content Start--->
+        <div class="padder_top80">
+            <!---Header--->
+            <div class="ms_header">
+                <div class="ms_top_left">
+
+                    <form action="/searchdash" , method="post">
+
+                        <div class="ms_top_search">
+                            <input type="text" name="movie" size="500" class="form-control"  list="choice" id="ice-cream-choice" autocomplete="off" placeholder="Search Movie Here..">
+
+                                <datalist id="choice">
+                                    {% for i in movie %}
+                                        <option value="{{i}}">
+                                        
+                                    {% endfor %}
+                                </datalist>
+
+                            <button type="submit">
+                                <span class="search_icon">
+                                    <img src="static/images/svg/search.svg" alt="">
+                                </span>
+
+                            </button>
+                            
+                            
+                        </div>
+
+
+                    </form>
+
+                    
+
+                    
+                </div>
+                <div class="ms_top_right">
+                    
+                    <div class="ms_top_btn">
+                        <div class="ms_top_btn">
+                            <a href="" class="ms_btn " data-toggle="modal" data-target=""><span>Welcome
+                                {{current_user.uname}}</span></a>
+                            <a href="/logout" class="ms_btn " data-toggle="" data-target=""><span>Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----Edit Profile Wrapper Start---->
+            <div class="ms_profile_wrapper">
+                <h1> Profile</h1>
+                <div class="ms_profile_box">
+                    <div class="ms_pro_img">
+                        <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png" alt="" class="img-fluid">
+                        <div class="pro_img_overlay">
+                            <h1>{{current_user.uage}}</h1>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="ms_pro_form">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" value="{{current_user.uname}}" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email *</label>
+                            <input type="text" value="{{current_user.umail}}" class="form-control" readonly>
+                        </div>
+                        
+                        <!-- <div class="pro-form-btn text-center marger_top15">
+                            <a href="#" class="ms_btn">save</a>
+                            <a href="#" class="ms_btn">cancel</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!----Main div close---->
+        </div>
+        
+        
+    </div>
+    <!----Register Modal Start---->
+   
+    <!--Main js file Style-->
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/audio-player.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/volume.js"></script>
+    <script type="text/javascript" src="static/js/plugins/nice_select/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/scroll/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="static/js/custom.js"></script>
+</body>
+
+</html>

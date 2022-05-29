@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>Movie Club</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Music">
+    <meta name="keywords" content="">
+    <meta name="author" content="kamleshyadav">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/nice_select/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/player/volume.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/scroll/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
+</head>
+static/
+
+<body>
+    <!----Loader Start---->
+    <div class="ms_loader">
+        <div class="wrap">
+            <img src="static/images/loader.gif" alt="">
+        </div>
+    </div>
+    <!----Main Wrapper Start---->
+    <div class="ms_main_wrapper">
+        <!---Side Menu Start--->
+        <div class="ms_sidemenu_wrapper">
+            <div class="ms_nav_close">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="ms_sidemenu_inner">
+                <div class="ms_logo_inner">
+                    <div class="ms_logo">
+                        <a href="/"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                    <div class="ms_logo_open">
+                        <a href="/"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="ms_nav_wrapper">
+                    <ul>
+                        <li><a href="/" class="active" title="Discover">
+                                <span class="nav_icon">
+                                    <span class="icon icon_discover"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li><a  href="#" title="Artists"  onclick="alert('please login to access this page');">
+                                <span class="nav_icon">
+                                    <span class="icon icon_tracks"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Profile
+                                </span>
+                            </a>
+                        </li>
+                        <!-- <li><a href="/watchlist" title="Albums">
+                                <span class="nav_icon">
+                                    <span class="icon icon_albums"></span>
+                                </span>
+                                <span class="nav_text">
+                                    WatchList
+                                </span>
+                            </a>
+                        </li>
+
+                        <li><a href="genres.html" title="Genres">
+                                <span class="nav_icon">
+                                    <span class="icon icon_genres"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Genres
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="top_track.html" title="Top Tracks">
+                                <span class="nav_icon">
+                                    <span class="icon icon_music"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Top Rated
+                                </span>
+                            </a>
+                        </li> -->
+                        <!-- <li><a href="free_music.html" title="Free Music">
+                                <span class="nav_icon">
+                                    <span class="icon icon_music"></span>
+                                </span>
+                                <span class="nav_text">
+                                    free music
+                                </span>
+                            </a>
+                        </li> -->
+                        <!-- <li><a href="stations.html" title="Stations">
+                                <span class="nav_icon">
+                                    <span class="icon icon_station"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Help
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav_downloads">
+                        <li><a href="download.html" title="Downloads">
+                                <span class="nav_icon">
+                                    <span class="icon icon_download"></span>
+                                </span>
+                                <span class="nav_text">
+                                    downloads
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="purchase.html" title="Purchased">
+                                <span class="nav_icon">
+                                    <span class="icon icon_purchased"></span>
+                                </span>
+                                <span class="nav_text">
+                                    purchased
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="favourite.html" title="Favourites">
+                                <span class="nav_icon">
+                                    <span class="icon icon_favourite"></span>
+                                </span>
+                                <span class="nav_text">
+                                    favourites
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="history.html" title="History">
+                                <span class="nav_icon">
+                                    <span class="icon icon_history"></span>
+                                </span>
+                                <span class="nav_text">
+                                    history
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav_playlist">
+                        <li><a href="feature_playlist.html" title="Featured Playlist">
+                                <span class="nav_icon">
+                                    <span class="icon icon_fe_playlist"></span>
+                                </span>
+                                <span class="nav_text">
+                                    featured playlist
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="add_playlist.html" title="Create Playlist">
+                                <span class="nav_icon">
+                                    <span class="icon icon_c_playlist"></span>
+                                </span>
+                                <span class="nav_text">
+                                    create playlist
+                                </span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+        <!---Main Content Start--->
+        <!-- <form action="/search" , method="post">
+                            <input type="text" name="movie" class="form-control"  list="choice" id="ice-cream-choice" autocomplete="off" placeholder="Search Movie Here..">
+
+                                <datalist id="choice">
+                                    {% for i in movie %}
+                                        <option value="{{i}}">
+                                        
+                                    {% endfor %}
+                                </datalist>
+
+
+
+                            <button type="submit" class="search_icon"><i class="fa fa-search"></i></button>
+                        </form> -->
+
+        <div class="ms_content_wrapper padder_top80">
+            <!---Header--->
+            <div class="ms_header">
+                <div class="ms_top_left">
+
+                    <form action="/search" , method="post">
+
+                        <div class="ms_top_search">
+                            <input type="text" name="movie" size="500" class="form-control"  list="choice" id="ice-cream-choice" autocomplete="off" placeholder="Search Movie Here..">
+
+                                <datalist id="choice">
+                                    {% for i in movie %}
+                                        <option value="{{i}}">
+                                        
+                                    {% endfor %}
+                                </datalist>
+
+                            <button type="submit">
+                                <span class="search_icon">
+                                    <img src="static/images/svg/search.svg" alt="">
+                                </span>
+
+                            </button>
+                            
+                            
+                        </div>
+
+
+                    </form>
+                    
+                    <div class="ms_top_trend">
+                        
+                    </div>
+                </div>
+                <div class="ms_top_right">
+                    
+                    <div class="ms_top_btn">
+                        <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal"
+                            data-target="#myModal"><span>register</span></a>
+                        <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal"
+                            data-target="#myModal1"><span>login</span></a>
+                    </div>
+                </div>
+            </div>
+            <!---Banner--->
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- <h1 >No Results !  </h1> -->
+                        <div class="col-lg-12 col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- <h1 >No Results !  </h1> -->
+                        <div class="col-lg-12 col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include "login_alert.html" %}
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            {% if postsdata|length >0 %}
+                            <!-- <div class="ms_banner_img">
+                                <img src="{{postsdata[0][1]}}" alt="" class="img-fluid">
+                            </div>
+                            <div class="ms_banner_text">
+                                <h1 class="ms_color">{{postsdata[0][0]}} </h1>
+                                <p> <strong>Rating: </strong> {{postsdata[0][2]}} <br><strong>Runtime: </strong> {{postsdata[0][3]}} <br> <strong>Genre: </strong> {{postsdata[0][4]}} <br> <br> {{postsdata[0][5]}} </p>
+                                
+                                <div class="ms_banner_btn">
+                                    <a href="#" class="ms_btn">Play Now</a> -->
+                            <!-- <a href="#" class="ms_btn"> </a> -->
+                            <br>
+                            <!-- {% for row in postsdata %}
+                                        <a href="#" class="ms_btn"></a>
+                                        <br>
+                                    {% endfor %} -->
+                            <!-- </div>
+                            </div> -->
+
+
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---Recently Played Music--->
+            <div class="ms_rcnt_slider">
+                <div class="ms_heading">
+                    <h1>Most Popular</h1>
+                    <!-- <span class="veiw_all"><a href="#">view more</a></span> -->
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        {% if postsdata|length > 0 %}
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{postsdata[1][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+                                            <form action="/search" method="post">
+                                                <input name='movie' type='hidden' value='{{postsdata[1][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+                                            <!-- <img src="static/images/svg/play.svg" alt=""> -->
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{postsdata[1][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <div>
+                                        <h3><a href="#">{{postsdata[1][i][5]}}</a></h3>
+                                        
+    
+                                    </div>
+                                    
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    
+
+                        {% endfor %}
+                        {% else %}
+
+                        
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next slider_nav_next"></div>
+                <div class="swiper-button-prev slider_nav_prev"></div>
+            </div>
+            <!---Weekly Top 15--->
+
+            <!---Featured Artists Music--->
+            <div class="ms_featured_slider">
+                <div class="ms_heading">
+                    <h1>Evergreen </h1>
+                    <!-- <spa/n class="veiw_all"><a href="#">view more</a></span> -->
+                </div>
+                <div class="ms_feature_slider swiper-container">
+                    <div class="swiper-wrapper">
+                        {% if evergreen|length > 0 %}
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{evergreen[0][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+
+                                            <form action="/search" method="post">
+                                                <input name='movie' type='hidden' value='{{evergreen[0][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+                                            
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{evergreen[0][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <h3><a href="#">{{evergreen[0][i][5]}}</a></h3>
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        {% endfor %}
+                        {% else %}
+                        
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next1 slider_nav_next"></div>
+                <div class="swiper-button-prev1 slider_nav_prev"></div>
+            </div>
+
+            <div class="ms_featured_slider">
+                <div class="ms_heading">
+                    <h1>TOP </h1>
+                    <!-- <spa/n class="veiw_all"><a href="#">view more</a></span> -->
+                </div>
+                <div class="ms_feature_slider swiper-container">
+                    <div class="swiper-wrapper">
+                        {% if evergreen|length > 0 %}
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{top[0][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+
+                                            <form action="/search" method="post">
+                                                <input name='movie' type='hidden' value='{{top[0][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+                                            
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{top[0][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <h3><a href="#">{{top[0][i][5]}}</a></h3>
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        {% endfor %}
+                        {% else %}
+                        
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next1 slider_nav_next"></div>
+                <div class="swiper-button-prev1 slider_nav_prev"></div>
+            </div>
+            <!----Add Section Start---->
+
+            <!----New Releases Section Start---->
+            
+            <!----Featured Albumn Section Start---->
+            
+            <!----Top Genres Section Start---->
+            <div class="ms_genres_wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ms_heading">
+                            <h1>Top Genres</h1>
+                            <!-- <span class="veiw_all"><a href="#">view more</a></span> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ms_genres_box">
+                            <img src="https://miro.medium.com/max/500/1*I9zDkUL5PfD7aT0O2Zk8mg.jpeg" alt="" class="img-fluid" />
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <!-- <div class="ms_play_icon">
+                                    <img src="static/images/svg/play.svg" alt="">
+                                </div> -->
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Horror</a></span>
+                                    <span class="ovrly_text2"><a href="#" onclick="alert('please login to access this page');">view Movies</a></span>
+                                </div>
+                            </div>
+                            <div class="ms_box_overlay_on">
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Horror</a></span>
+                                    <span class="ovrly_text2"><a href="#" onclick="alert('please login to access this page');">view Movies</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                    <img src="https://beccijayne.files.wordpress.com/2013/03/the-resident-movie-poster.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Thriller</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Thriller</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img src="https://internationalcrimefiction.files.wordpress.com/2020/06/thumbnail_femme-fatale.jpg?w=1024" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Crime</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Crime</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img src="https://unitingartists.org/wp-content/uploads/2020/06/Adventure-Genre.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Adventure</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Adventure</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                    <img src="https://photos.hancinema.net/photos/photo747319.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Drama </a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#" onclick="alert('please login to access this page');">Drama</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="ms_genres_box">
+                            <img src="https://imgc.allpostersimages.com/img/posters/john-wick_u-L-F7SH240.jpg" alt="" class="img-fluid" />
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <!-- <div class="ms_play_icon">
+                                    <img src="static/images/svg/play.svg" alt="">
+                                </div> -->
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="#">Action</a></span>
+                                </div>
+                            </div>
+                            <div class="ms_box_overlay_on">
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="#">Action</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!----Audio Player Section---->
+        
+    </div>
+    <!----Register Modal Start---->
+    <!-- Modal -->
+    <div class="ms_register_popup">
+        <div id="myModal" class="modal  centered-modal" role="dialog">
+            <div class="modal-dialog register_dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <i class="fa_icon form_close"></i>
+                    </button>
+                    <div class="modal-body">
+                        <div class="ms_register_img">
+                            <img src="static/images/movie_icon.png" alt="" class="img-fluid" />
+                        </div>
+                        <div class="ms_register_form">
+                            <h2>Register / Sign Up</h2>
+                            <form action="/signup" method="post">
+                                <div class="form-group">
+                                    <input type="text" name="username" placeholder="Enter Your Name"
+                                        class="form-control"  required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-user" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="usermail" placeholder="Enter Your Email"
+                                        class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalide Email" required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-envelope" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="userage" placeholder="Enter Your Age"
+                                        class="form-control" pattern="[0-9]{}" title="Enter in digit" required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-euser" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="userpass" placeholder="Enter Password"
+                                        class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-lock" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="usercpass" placeholder="Confirm Password"
+                                        class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                    <span class="form_icon">
+                                        <i class=" fa_icon form-lock" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+
+                                <!-- <div class="form-group">
+                                    <input type="submit" class="form-control">
+                                    
+                                </div> -->
+
+                                <div class="form-group-hii">
+                                    <input type="submit" class="form-control">
+
+                                </div>
+
+                                <!-- <button type="submit" class="">register now</button> -->
+
+                                <!-- <a href="#" class="ms_btn">re</a> -->
+
+                            </form>
+
+                            <p>Already Have An Account? <a href="#myModal1" data-toggle="modal"
+                                    class="ms_modal hideCurrentModel">login here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----Login Popup Start---->
+        <div id="myModal1" class="modal  centered-modal" role="dialog">
+            <div class="modal-dialog login_dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <i class="fa_icon form_close"></i>
+                    </button>
+                    <div class="modal-body">
+                        <div class="ms_register_img">
+                            <img src="static/images/movie_icon.png" alt="" class="img-fluid" />
+                        </div>
+                        <div class="ms_register_form">
+                            <h2>login / Sign in</h2>
+
+                            <form action="/login" method="post">
+
+                                <div class="form-group">
+                                    <input type="email" name="usermail" placeholder="Enter Your Email"
+                                        class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalide Email" required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-envelope" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="userpass" placeholder="Enter Password"
+                                        class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                    <span class="form_icon">
+                                        <i class="fa_icon form-lock" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <br>
+
+                                <div class="form-group-hii">
+                                    <input type="submit" class="form-control">
+
+                                </div>
+                                <!-- <div class="remember_checkbox">
+                                    <label>Keep me signed in
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div> -->
+                                <!-- <a href="profile.html" class="ms_btn" target="_blank">login now</a> -->
+                            </form>
+
+
+
+
+                            <div class="popup_forgot">
+                                <a href="#">Forgot Password ?</a>
+                            </div>
+                            <p>Don't Have An Account? <a href="#myModal" data-toggle="modal"
+                                    class="ms_modal1 hideCurrentModel">register here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----Language Selection Modal---->
+    
+    <!----Queue Clear Model ---->
+    
+    <!----Queue Save Modal---->
+    
+    <!--Main js file Style-->
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/audio-player.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/volume.js"></script>
+    <script type="text/javascript" src="static/js/plugins/nice_select/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/scroll/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="static/js/custom.js"></script>
+</body>
+
+</html>

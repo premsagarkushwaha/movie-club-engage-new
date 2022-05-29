@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>Movie Club </title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Music">
+    <meta name="keywords" content="">
+    <meta name="author" content="kamleshyadav">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/nice_select/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/player/volume.css">
+    <link rel="stylesheet" type="text/css" href="static/js/plugins/scroll/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/alert.css">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
+</head>
+static/
+
+<body>
+    <!----Loader Start---->
+    <div class="ms_loader">
+        <div class="wrap">
+            <img src="static/images/loader.gif" alt="">
+        </div>
+    </div>
+    <!----Main Wrapper Start---->
+    <div class="ms_main_wrapper">
+        <!---Side Menu Start--->
+        <div class="ms_sidemenu_wrapper">
+            <div class="ms_nav_close">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="ms_sidemenu_inner">
+                <div class="ms_logo_inner">
+                    <div class="ms_logo">
+                        <a href="/dashboard"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                    <div class="ms_logo_open">
+                        <a href="/dashboard"><img src="static/images/logo.png" alt="" class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="ms_nav_wrapper">
+                    <ul>
+                        <li><a href="/dashboard" class="active" title="Discover">
+                                <span class="nav_icon">
+                                    <span class="icon icon_discover"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/profile">
+                                <span class="nav_icon">
+                                    <span class="icon icon_tracks"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Profile
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/watchlist" title="Albums">
+                                <span class="nav_icon">
+                                    <span class="icon icon_albums"></span>
+                                </span>
+                                <span class="nav_text">
+                                    WatchList
+                                </span>
+                            </a>
+                        </li>
+
+                        <li><a href="/genre" title="Genres">
+                                <span class="nav_icon">
+                                    <span class="icon icon_genres"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Genres
+                                </span>
+                            </a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                    <ul class="nav_downloads">
+                        
+                        <li><a href="/favcol" title="Favourites">
+                                <span class="nav_icon">
+                                    <span class="icon icon_favourite"></span>
+                                </span>
+                                <span class="nav_text">
+                                    favourites
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/history" title="History">
+                                <span class="nav_icon">
+                                    <span class="icon icon_history"></span>
+                                </span>
+                                <span class="nav_text">
+                                    history
+                                </span>
+                            </a>
+                        </li>
+                        <li><a href="/logout" title="Purchased">
+                            <span class="nav_icon">
+                                <span class="icon icon_download"></span>
+                            </span>
+                            <span class="nav_text">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <!---Main Content Start--->
+        <div class="ms_content_wrapper padder_top80">
+            <!---Header--->
+            <div class="ms_header">
+                <div class="ms_top_left">
+                    <form action="/searchdash" , method="post">
+
+                        <div class="ms_top_search">
+                            <input type="text" name="movie" size="500" class="form-control"  list="choice" id="ice-cream-choice" autocomplete="off" placeholder="Search Movie Here..">
+
+                                <datalist id="choice">
+                                    {% for i in movie %}
+                                        <option value="{{i}}">
+                                        
+                                    {% endfor %}
+                                </datalist>
+
+                            <button type="submit">
+                                <span class="search_icon">
+                                    <img src="static/images/svg/search.svg" alt="">
+                                </span>
+
+                            </button>
+                            
+                            
+                        </div>
+
+
+                    </form>
+                    
+                </div>
+                <div class="ms_top_right">
+                    <!-- <div class="ms_top_lang">
+                        <span data-toggle="modal" data-target="#lang_modal">languages <img src="static/images/svg/lang.svg"
+                                alt=""></span>
+                    </div> -->
+                    <div class="ms_top_btn">
+                        <!-- <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal"
+                            data-target="#myModal"><span>register</span></a>
+                        <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal"
+                            data-target="#myModal1"><span>{{current_user.uname}}</span></a> -->
+                        <a href="" class="ms_btn " data-toggle="modal" data-target=""><span>Welcome
+                                {{current_user.uname}}</span></a>
+                        <a href="/logout" class="ms_btn " data-toggle="" data-target=""><span>Logout</span></a>
+                    </div>
+                </div>
+            </div>
+            <!---Banner--->
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- <h1 >No Results !  </h1> -->
+                        <div class="col-lg-12 col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- <h1 >No Results !  </h1> -->
+                        <div class="col-lg-12 col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "message.html" %}
+
+            
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            {% if postsdata|length >0 %}
+                            <!-- <div class="ms_banner_img">
+                                <img src="{{postsdata[1][0]}}" alt="" class="img-fluid">
+                            </div>
+                            <div class="ms_banner_text">
+                                <h1>This Month’s</h1>
+                                <h1 class="ms_color">{{postsdata[0][0]}} </h1>
+                                <p>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, One More Of A
+                                    Stranger, Endless<br> Things, The Heartbeat Stops, Walking Promises, Desired Games
+                                    and many more...</p>
+                                <div class="ms_banner_btn">
+
+                                    <form action="/playmovie", method="post"> -->
+
+                            <!-- <input name='playm' type='hidden' value='thor'> -->
+
+                            <!-- <button type="submit" class="ms_btn" > Play Now</button>
+                                        
+                                    
+                                    </form> -->
+
+                            <!-- <a href="#" class="ms_btn"> </a> -->
+                            <br>
+                            <!-- {% for row in postsdata %}
+                                        <a href="#" class="ms_btn"></a>
+                                        <br>
+                                    {% endfor %} -->
+                            <!-- </div>
+                            </div> -->
+                            {% else %}
+                            <!-- <div class="ms_banner_img">
+                                <img src="static/images/banner.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="ms_banner_text">
+                                <h1>This Month’s</h1>
+                                <h1 class="ms_color">Record Breaking Albums !</h1>
+                                <p>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, One More Of A
+                                    Stranger, Endless<br> Things, The Heartbeat Stops, Walking Promises, Desired Games
+                                    and many more...</p>
+                                <div class="ms_banner_btn">
+                                    <form action="/playmovie", method="post"> -->
+
+                            <!-- <input name='playmovie' type='hidden' value='thor'> -->
+
+                            <!-- <button type="submit" class="ms_btn" > Play Now</button>
+                                        
+                                    
+                                    </form>
+                                </div>
+                            </div> -->
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---Recently Played Music--->
+            <div class="ms_rcnt_slider">
+                <div class="ms_heading">
+                    <h1>Top Recommended </h1>
+                    
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        {% if postsdata|length > 0 %}
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{postsdata[1][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+                                            
+                                            <form action="/searchdash" method="post">
+                                                <input name='movie' type='hidden' value='{{postsdata[1][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{postsdata[1][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <h3><a href="#">{{postsdata[1][i][5]}}</a></h3>
+                                    
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        {% endfor %}
+                        {% else %}
+                        
+
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next slider_nav_next"></div>
+                <div class="swiper-button-prev slider_nav_prev"></div>
+            </div>
+
+            <br> 
+            <!---Weekly Top 15--->
+            {% if postsdata[2]|length > 0 %}
+            <div class="ms_rcnt_slider">
+                <div class="ms_heading">
+                    <h1>You May Like </h1>
+                    
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{postsdata[2][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+                                            <form action="/searchdash" method="post">
+                                                <input name='movie' type='hidden' value='{{postsdata[2][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+                                            
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{postsdata[2][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <div>
+                                        <h3><a href="#">{{postsdata[2][i][5]}}</a></h3>
+                                        
+
+                                    </div>
+                                    
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        {% endfor %}
+                
+                        
+
+                
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next slider_nav_next"></div>
+                <div class="swiper-button-prev slider_nav_prev"></div>
+            </div>
+            {% endif %}
+
+
+
+            
+
+            <!---Featured Artists Music--->
+            
+            <!----Add Section Start---->
+
+            <div class="ms_featured_slider">
+                <div class="ms_heading">
+                    <h1>TOP </h1>
+                    <!-- <spa/n class="veiw_all"><a href="#">view more</a></span> -->
+                </div>
+                <div class="ms_feature_slider swiper-container">
+                    <div class="swiper-wrapper">
+                        {% if top|length > 0 %}
+                        {% for i in range(0,10) %}
+                        <div class="swiper-slide">
+                            <div class="ms_rcnt_box">
+                                <div class="ms_rcnt_box_img">
+                                    <img src="{{top[0][i][0]}}" alt="">
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        
+                                        <div class="ms_play_icon">
+
+                                            <form action="/searchdash" method="post">
+                                                <input name='movie' type='hidden' value='{{top[0][i][5]}}'>
+                                                <button type="submit" style="background-color: transparent; border-color: transparent; "><img src="static/images/svg/play.svg" alt=""></button>
+
+                                            </form>
+                                            
+
+                                            <div class="addlabel">
+                                                <p>
+                                                    {{top[0][i][6]}} <i class="fa fa-star-o"
+                                                        aria-hidden="true"></i>
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="ms_rcnt_box_text">
+                                    <h3><a href="#">{{top[0][i][5]}}</a></h3>
+                                    <!-- <p>Ava Cornish & Brian Hill</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        {% endfor %}
+                        {% else %}
+                        
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next1 slider_nav_next"></div>
+                <div class="swiper-button-prev1 slider_nav_prev"></div>
+            </div>
+            
+            <!----New Releases Section Start---->
+            
+            <!----Featured Albumn Section Start---->
+            
+            <!----Top Genres Section Start---->
+            <div class="ms_genres_wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ms_heading">
+                            <h1>By Genres</h1>
+                            <!-- <span class="veiw_all"><a href="#">view more</a></span> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ms_genres_box">
+                            <img src="https://miro.medium.com/max/500/1*I9zDkUL5PfD7aT0O2Zk8mg.jpeg" alt="" class="img-fluid" />
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <!-- <div class="ms_play_icon">
+                                    <img src="static/images/svg/play.svg" alt="">
+                                </div> -->
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="/horror">Horror</a></span>
+                                    <span class="ovrly_text2"><a href="/horror">view Movies</a></span>
+                                </div>
+                            </div>
+                            <div class="ms_box_overlay_on">
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="/horror">Horror</a></span>
+                                    <span class="ovrly_text2"><a href="/horror">view Movies</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                    <img src="https://beccijayne.files.wordpress.com/2013/03/the-resident-movie-poster.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/thriller">Thriller</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/thriller">Thriller</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img src="https://internationalcrimefiction.files.wordpress.com/2020/06/thumbnail_femme-fatale.jpg?w=1024" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/crime">Crime</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/crime">Crime</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img src="https://unitingartists.org/wp-content/uploads/2020/06/Adventure-Genre.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/adventure">Adventure</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="/adventure">Adventure</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                    <img src="https://photos.hancinema.net/photos/photo747319.jpg" alt="" class="img-fluid" />
+                                    <div class="ms_main_overlay">
+                                        <div class="ms_box_overlay"></div>
+                                        <!-- <div class="ms_play_icon">
+                                            <img src="static/images/svg/play.svg" alt="">
+                                        </div> -->
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#">Drama</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ms_box_overlay_on">
+                                        <div class="ovrly_text_div">
+                                            <span class="ovrly_text1"><a href="#">Drama</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="ms_genres_box">
+                            <img src="https://imgc.allpostersimages.com/img/posters/john-wick_u-L-F7SH240.jpg" alt="" class="img-fluid" />
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <!-- <div class="ms_play_icon">
+                                    <img src="static/images/svg/play.svg" alt="">
+                                </div> -->
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="/action">Action</a></span>
+                                </div>
+                            </div>
+                            <div class="ms_box_overlay_on">
+                                <div class="ovrly_text_div">
+                                    <span class="ovrly_text1"><a href="/action">Action</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    
+    
+    <!--Main js file Style-->
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/audio-player.js"></script>
+    <script type="text/javascript" src="static/js/plugins/player/volume.js"></script>
+    <script type="text/javascript" src="static/js/plugins/nice_select/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/scroll/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="static/js/custom.js"></script>
+</body>
+
+</html>

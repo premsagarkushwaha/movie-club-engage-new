@@ -1,0 +1,32 @@
+.alert {
+    padding: 20px;
+    background-color: #78b7be;
+    color: white;
+    font-size: 20px;
+    font-family: inherit;
+    border-radius: 9px;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 10px;
+    
+    cursor: pointer;
+    transition: 0.9s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+
+  /* .ms-banner .ms_banner_img img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  } */

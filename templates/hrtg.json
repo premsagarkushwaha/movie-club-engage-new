@@ -1,0 +1,94 @@
+{
+    "adult": false,
+    "backdrop_path": "/jlQJDD0L5ZojjlS0KYnApdO0n19.jpg",
+    "belongs_to_collection": {
+        "id": 87096,
+        "name": "Avatar Collection",
+        "poster_path": "/gC3tW9a45RGOzzSh6wv91pFnmFr.jpg",
+        "backdrop_path": "/6qkJLRCZp9Y3ovXti5tSuhH0DpO.jpg"
+    },
+    "budget": 237000000,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        }
+    ],
+    "homepage": "https://www.avatar.com/movies/avatar",
+    "id": 19995,
+    "imdb_id": "tt0499549",
+    "original_language": "en",
+    "original_title": "Avatar",
+    "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "popularity": 454.694,
+    "poster_path": "/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+    "production_companies": [
+        {
+            "id": 444,
+            "logo_path": "/42UPdZl6B2cFXgNUASR8hSt9mpS.png",
+            "name": "Dune Entertainment",
+            "origin_country": "US"
+        },
+        {
+            "id": 574,
+            "logo_path": "/iB6GjNVHs5hOqcEYt2rcjBqIjki.png",
+            "name": "Lightstorm Entertainment",
+            "origin_country": "US"
+        },
+        {
+            "id": 25,
+            "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+            "name": "20th Century Fox",
+            "origin_country": "US"
+        },
+        {
+            "id": 290,
+            "logo_path": "/Q8mw2AOQQc8Qg0uNwLWq86DVZv.png",
+            "name": "Ingenious Media",
+            "origin_country": "GB"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        },
+        {
+            "iso_3166_1": "GB",
+            "name": "United Kingdom"
+        }
+    ],
+    "release_date": "2009-12-10",
+    "revenue": 2847246203,
+    "runtime": 162,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Español"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Enter the world of Pandora.",
+    "title": "Avatar",
+    "video": false,
+    "vote_average": 7.5,
+    "vote_count": 25348
+}
