@@ -31,9 +31,9 @@ login_manager.init_app(app)
 login_manager.login_view = "login"
 
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql:///username:password@localhost/databasename"
-#app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@127.0.0.2:3307/newmed"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@127.0.0.2:3307/newmed"
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://cxoeaohdkmjclz:b36e9e14af552226e938d247e02eab4ff6121cb53009b0955a2d3681f76ac672@ec2-52-204-195-41.compute-1.amazonaws.com:5432/df8qaermkm5lts"
+#app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://cxoeaohdkmjclz:b36e9e14af552226e938d247e02eab4ff6121cb53009b0955a2d3681f76ac672@ec2-52-204-195-41.compute-1.amazonaws.com:5432/df8qaermkm5lts"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
