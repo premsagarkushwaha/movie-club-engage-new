@@ -17,7 +17,7 @@ Steps to Clone repository : - <br />
 3.1 note: - You Need xampp mysql server for xampp databse connection with app that  can be done by two way<br />
 3.2 first way :- if you have already using xampp mysql then create database on your phpMyadmin  and update ip address and port number on of databse on app.py file of the project.<br />
 you can find your phpmyadmin ip and port on admin dashboard. below is screenshot.<br />
-![alt text](https://raw.githubusercontent.com/premsagarkushwaha/Greenwindow/main/ipport.png?token=GHSAT0AAAAAABUN4BWKIB57UEAXR6G7PUL6YUY6DKQ)<br />
+![alt text](https://raw.githubusercontent.com/premsagarkushwaha/NLP/main/ipport.png)<br />
 3.3 second way : - or create mysql connection on ip address 127.0.0.2 and use port 3307 and then go to phpMyadmin and create database.
 you can see screenshot below:- <br />
 ![alt text](https://raw.githubusercontent.com/premsagarkushwaha/Greenwindow/main/dbu.png?token=GHSAT0AAAAAABUN4BWLHZZXDCRT3C2UTL6GYUY6I6A)<br />
