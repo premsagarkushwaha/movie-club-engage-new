@@ -3,11 +3,13 @@
 ## video demo url: - https://drive.google.com/file/d/1A3my5dSVmF8NvCp7KsrkWKEE_OdF70_A/view?usp=sharing
 
 requirements: - 
+
 1. Visual Studio Code/ pycharm
 2. Xampp(phpMyAdmin)
 3. MySQL
 4. visual studio c++ updated version(more than 14.0)
 5. need to install surprise package successfully.
+6. internet access required
 <br />
 
 Steps to Clone repository : - <br />
