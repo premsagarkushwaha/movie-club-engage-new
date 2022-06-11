@@ -22,7 +22,7 @@ you can find your phpmyadmin ip and port on admin dashboard. below is screenshot
 ![alt text](https://raw.githubusercontent.com/premsagarkushwaha/NLP/main/ipport.png)<br />
 3.3 second way : - or create mysql connection on ip address 127.0.0.2 and use port 3307 and then go to phpMyadmin and create database.
 you can see screenshot below:- <br />
-![alt text](https://raw.githubusercontent.com/premsagarkushwaha/Greenwindow/main/dbu.png?token=GHSAT0AAAAAABUN4BWLHZZXDCRT3C2UTL6GYUY6I6A)<br />
+![alt text](https://raw.githubusercontent.com/premsagarkushwaha/Greenwindow/main/dbu.png?token=GHSAT0AAAAAABUN4BWL3QC4E5LLBEQT2XSIYVEOORA)<br />
 4. now go to database and click on import then select newmwd.sql file which is in mysql folder of project-"movie-club-engage-new" that is cloned by you.
 5. after successfully importing database and establishing connection(or updating ip address and port and making connection successfully) go to project terminal and install all required package and library. use command "pip install -r requirements.txt"
 6. now run this project.
